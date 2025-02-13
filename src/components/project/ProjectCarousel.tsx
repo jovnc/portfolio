@@ -11,7 +11,7 @@ import { Project } from "@/types/Project";
 export function ProjectCarousel({ projects }: { projects: Project[] }) {
   return (
     <Carousel className="w-full mx-auto">
-      <CarouselContent>
+      <CarouselContent className="p-10">
         {projects.map((project, index) => (
           <CarouselItem key={index} className="max-w-lg px-10">
             <ProjectCard {...project} />

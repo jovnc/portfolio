@@ -41,7 +41,7 @@ export default function ProjectCard({
   youtube,
 }: ProjectCardProps) {
   return (
-    <Card className="transform transition-transform duration-300">
+    <Card className="transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl overflow-hidden">
       <CardHeader className="flex flex-col gap-4 items-center justify-center">
         <Image
           src={imageSrc}

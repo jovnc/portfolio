@@ -41,19 +41,6 @@ export const hackathons = [
     techStack: ["reactjs", "nextjs", "postgresql"],
     date: "2025",
     github: "https://github.com/jovnc/hackforcities",
-    youtube: "https://www.youtube.com/watch?v=E6QCOmw6JGs",
-  },
-];
-
-export const personalProjects = [
-  {
-    imageSrc: "/example.png",
-    title: "Chirple",
-    subtitle: "Tailored data analytics tool for your products and events",
-    description:
-      "Chirple is a data analytics tool that provides insights into your products and events. It helps you understand your audience better, track your product's performance, and optimize your marketing strategies. With Chirple, you can make data-driven decisions that drive growth and success.",
-    techStack: ["reactjs", "nodejs", "mongodb"],
-    date: "2021",
-    github: "https://github.com/jovnc/bigatheart",
+    youtube: "https://www.youtube.com/watch?v=1ZINkDlyPrs",
   },
 ];

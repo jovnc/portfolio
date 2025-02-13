@@ -8,7 +8,7 @@ export default function Hackathons() {
     <FadeInSection>
       <div className="w-full flex flex-col items-center gap-8 p-10 rounded-lg">
         <h2 className="font-bold text-2xl">Hackathons</h2>
-        <div className="flex flex-col items-center gap-4 w-full">
+        <div className="flex flex-col items-center gap-4 w-full rounded-lg">
           <ProjectCarousel projects={hackathons} />
         </div>
       </div>
