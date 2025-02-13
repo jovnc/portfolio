@@ -44,3 +44,17 @@ export const hackathons = [
     youtube: "https://www.youtube.com/watch?v=1ZINkDlyPrs",
   },
 ];
+
+export const personalProjects = [
+  {
+    imageSrc: "/Portfolio.jpg",
+    title: "Portfolio",
+    subtitle: "Personal Portfolio",
+    description:
+      "Personal portfolio website built using Next.JS full stack React framework, deployed on Vercel",
+    techStack: ["reactjs", "nextjs", "vercel"],
+    date: "2024",
+    github: "",
+    youtube: "https://www.youtube.com/watch?v=1ZINkDlyPrs",
+  },
+];
