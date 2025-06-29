@@ -1,8 +1,8 @@
 "use client";
-import { TextTypeAnimation } from "@/components/home/TextTypeAnimation";
+import { TextTypeAnimation } from "@/components/ui/text-type-animation";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
 import Socials from "./Socials";
 
 export default function HomeHeader() {
