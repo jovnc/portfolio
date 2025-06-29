@@ -1,7 +1,9 @@
 "use client";
-import { NameTypeAnimation } from "@/components/home/NameTypeAnimation";
+import { TextTypeAnimation } from "@/components/home/TextTypeAnimation";
 import { ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import Socials from "./Socials";
 
 export default function HomeHeader() {
   const [showArrow, setShowArrow] = useState(true);
@@ -29,13 +31,27 @@ export default function HomeHeader() {
   return (
     <section className="relative h-screen flex flex-col justify-center items-center w-full">
       {/* Main content */}
-      <div className="relative z-10 text-center px-4 animate-fade-in italic">
-        <span className="inline text-3xl font-medium text-white/90 tracking-wide">
-          Hi I'm
-        </span>
-        <h1 className="text-5xl font-bold gradient-text tracking-tight leading-none mt-2">
-          <NameTypeAnimation />
-        </h1>
+      <div className="flex flex-row gap-2 items-center justify-center">
+        {/* Name and role */}
+        <div className="relative z-10 text-center px-4 animate-fade-in italic flex flex-col items-center justify-center gap-2">
+          <h1 className="text-6xl font-bold gradient-text tracking-tight leading-none mt-2 py-2">
+            <TextTypeAnimation text="Jovan Ng" />
+          </h1>
+          <p className="text-white">Full Stack Software Engineer</p>
+        </div>
+
+        {/* Avatar */}
+        {/* <div className="relative z-10">
+          <Avatar className="w-24 h-24">
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </div> */}
+      </div>
+
+      {/* Socials */}
+      <div className="mt-8">
+        <Socials />
       </div>
 
       {/* Animated scroll indicator */}
