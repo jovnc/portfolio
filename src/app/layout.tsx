@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/nav/NavBar";
-import { ThemeProvider } from "@/components/dark-mode/theme-provider";
-import { Toaster } from "@/components/ui/toaster";
-import Footer from "@/components/footer/Footer";
+import SnowBackground from "@/components/ui/snowbackground";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // specify needed weights
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,23 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-mono`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="min-h-screen container mx-auto px-4 py-8">
-            <NavBar />
-            {children}
-          </div>
-          <Toaster />
-        </ThemeProvider>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased`}>
+        <div className="min-h-screen mx-auto text-white relative">
+          <SnowBackground />
+          <div className="relative z-10">{children}</div>
+        </div>
       </body>
     </html>
   );

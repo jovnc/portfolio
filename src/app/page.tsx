@@ -1,20 +1,9 @@
-import { Separator } from "@/components/ui/separator";
-import HomeHeader from "../components/home/HomeHeader";
-import TechStack from "../components/home/TechStack";
-import ContactCard from "@/components/contact/ContactCard";
-import Socials from "@/components/home/Socials";
+import HomeHeader from "@/components/home/HomeHeader";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-row justify-center min-h-screen w-full pt-8">
-      <main className="flex flex-col gap-12 items-center w-full">
-        <HomeHeader />
-        <Socials />
-        <Separator />
-        <TechStack />
-        <Separator />
-        <ContactCard />
-      </main>
-    </div>
+    <main className="flex flex-row justify-center min-h-screen w-full">
+      <HomeHeader />
+    </main>
   );
 }
