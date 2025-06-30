@@ -1,5 +1,5 @@
 import { experiences } from "@/data/Experiences";
-import { TrendingUp, Users, Award } from "lucide-react";
+import { TrendingUp, Users } from "lucide-react";
 import ExperienceTimeline from "./ExperienceTimeline";
 import StatsCard from "./StatsCard";
 
@@ -8,10 +8,9 @@ export default function ExperienceSection() {
     new Date().getFullYear() - 2023 + new Date().getMonth() / 12
   );
   const totalCompanies = experiences.length;
-  const totalProjects = 5;
 
   return (
-    <section className="w-full mx-auto px-4 py-16">
+    <section className="w-full mx-auto px-4 py-16" id="experiences">
       <div className="text-center mb-12">
         <h3 className="text-4xl font-bold text-center mb-6">Experiences</h3>
         <p className="text-gray-100 max-w-3xl mx-auto mb-8 italic text-sm">
@@ -20,18 +19,13 @@ export default function ExperienceSection() {
         </p>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
+        <div className="flex flex-row items-center justify-center gap-6 max-w-2xl mx-auto mb-12">
           <StatsCard
             icon={TrendingUp}
             value={`${totalYears}+`}
             label="Years Experience"
           />
           <StatsCard icon={Users} value={totalCompanies} label="Companies" />
-          <StatsCard
-            icon={Award}
-            value={totalProjects}
-            label="Hackathons Won"
-          />
         </div>
       </div>
 
