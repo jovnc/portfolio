@@ -16,12 +16,7 @@ const formatDate = (dateString: string) => {
   return dateString;
 };
 
-export default function ProjectCard({
-  project,
-  index,
-  isFirst,
-  isLast,
-}: ProjectCardProps) {
+export default function ProjectCard({ project, isFirst }: ProjectCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
