@@ -1,3 +1,14 @@
+export interface Project {
+  imageSrc: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  techStack: string[];
+  date: string;
+  github?: string;
+  youtube?: string;
+}
+
 export const hackathons = [
   {
     imageSrc: "/h4g.jpeg",
@@ -52,7 +63,6 @@ export const hackathons = [
     techStack: ["reactjs", "nextjs", "postgresql"],
     date: "2025",
     github: "https://github.com/jovnc/port63",
-    youtube: "https://www.youtube.com/watch?v=1ZINkDlyPrs",
   },
 ];
 
