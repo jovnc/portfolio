@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SnowBackground from "@/components/ui/snowbackground";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
 
 const inter = Inter({
   subsets: ["latin"],

@@ -1,5 +1,6 @@
 import HomeHeader from "@/components/sections/home/HomeHeader";
 import ExperienceSection from "@/components/sections/experience/ExperienceSection";
+import { ProjectsSection } from "@/components/sections/project";
 
 export default function HomePage() {
   return (
@@ -10,11 +11,13 @@ export default function HomePage() {
       <div className="flex-1">
         {/* Experiences section */}
         <ExperienceSection />
-        {/* Skills section */}
 
         {/* Projects & Hackathons section */}
+        <ProjectsSection />
 
-        {/* Others section */}
+        {/* Skills section */}
+
+        {/* Education & Certification section */}
 
         {/* Contact section */}
       </div>

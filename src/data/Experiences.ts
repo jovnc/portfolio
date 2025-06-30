@@ -1,5 +1,4 @@
 export interface Experience {
-  id: string;
   company: string;
   position: string;
   location: string;
@@ -7,56 +6,56 @@ export interface Experience {
   endDate: string;
   description: string[];
   technologies: string[];
-  type: "full-time" | "part-time" | "internship" | "freelance" | "contract";
 }
 
 export const experiences: Experience[] = [
   {
-    id: "1",
-    company: "Tech Company",
-    position: "Software Engineer",
-    location: "San Francisco, CA",
-    startDate: "2023-01",
+    company: "Formo.so",
+    position: "Full Stack Software Engineer Intern",
+    location: "Ho Chi Minh City, Vietnam",
+    startDate: "2025-05",
     endDate: "Present",
     description: [
-      "Developed and maintained scalable web applications using React and Node.js",
-      "Collaborated with cross-functional teams to deliver high-quality software solutions",
-      "Implemented responsive designs and optimized application performance",
-      "Participated in code reviews and mentored junior developers",
+      "Developed and deployed core features using Next.js, Express.js, ClickHouse, Vercel AI and PostgreSQL, implementing automated weekly email reports, custom chart builder with 6 visualization types, and AI MCP integration that enabled 800+ customers to effortlessly transform web2 and web3 raw data into actionable insights and reduce time-to-analysis by 75%",
     ],
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
-    type: "full-time",
+    technologies: [
+      "ReactJS",
+      "NextJS",
+      "TypeScript",
+      "ExpressJS",
+      "PostgreSQL",
+      "AWS",
+    ],
   },
   {
-    id: "2",
-    company: "Startup Inc",
-    position: "Frontend Developer",
-    location: "Remote",
-    startDate: "2022-06",
-    endDate: "2022-12",
+    company: "Defence Science Technology Agency (DSTA)",
+    position: "Application Security Intern",
+    location: "Singapore",
+    startDate: "2024-04",
+    endDate: "2024-06",
     description: [
-      "Built responsive user interfaces using React and TailwindCSS",
-      "Integrated RESTful APIs and implemented state management with Redux",
-      "Collaborated with designers to create pixel-perfect implementations",
-      "Optimized applications for maximum speed and scalability",
+      "Conducted penetration testing on 4 internal libraries using Burp Suite, Kali Linux, and Caido, identifying vulnerabilities and delivering detailed VAPT reports with actionable remediation strategies",
+      "Developed testing application using Java Spring Boot, ReactJS, and PostgreSQL to validate role-based access controls across Windows (Active Directory), Linux (IPA Server), and AWS environments, implementing least-privilege principles that reduced unauthorized access risks by 30%",
     ],
-    technologies: ["React", "TailwindCSS", "Redux", "JavaScript", "Git"],
-    type: "internship",
+    technologies: [
+      "ReactJS",
+      "TailwindCSS",
+      "Spring Boot",
+      "PostgreSQL",
+      "AWS",
+      "Linux",
+      "AD",
+    ],
   },
   {
-    id: "3",
-    company: "Freelance",
-    position: "Full Stack Developer",
-    location: "Remote",
-    startDate: "2021-09",
-    endDate: "2022-05",
+    company: "Ministry of Education (MOE) EdTech HQ",
+    position: "EdTech Research Assistant Intern",
+    location: "Singapore",
+    startDate: "2024-01",
+    endDate: "2024-03",
     description: [
-      "Developed custom web applications for various clients",
-      "Created responsive designs and implemented database solutions",
-      "Provided technical consultation and project management",
-      "Delivered projects on time and within budget",
+      "Streamlined digitalization of 100+ exam papers in SLS eLearning platform",
     ],
-    technologies: ["React", "Next.js", "Node.js", "MongoDB", "Vercel"],
-    type: "freelance",
+    technologies: ["OpenAI"],
   },
 ];

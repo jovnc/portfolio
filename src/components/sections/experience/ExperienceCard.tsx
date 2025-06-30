@@ -1,141 +1,113 @@
-"use client";
-
 import { Experience } from "@/data/Experiences";
-import { Calendar, MapPin, Tag, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { Briefcase, MapPin } from "lucide-react";
+import { TechTag } from "@/components/common";
 
 interface ExperienceCardProps {
   experience: Experience;
+  isFirst: boolean;
 }
 
-export default function ExperienceCard({ experience }: ExperienceCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+const formatDate = (dateString: string) => {
+  if (dateString === "Present") return "Present";
+  const [year, month] = dateString.split("-");
+  const date = new Date(parseInt(year), parseInt(month) - 1);
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+};
 
-  const formatDate = (dateString: string) => {
-    if (dateString === "Present") return "Present";
-    const [year, month] = dateString.split("-");
-    const date = new Date(parseInt(year), parseInt(month) - 1);
-    return date.toLocaleDateString("en-US", {
-      month: "short",
-      year: "numeric",
-    });
-  };
-
-  const getTypeColor = (type: Experience["type"]) => {
-    const colors = {
-      "full-time": "bg-green-100 text-green-800 border-green-200",
-      "part-time": "bg-blue-100 text-blue-800 border-blue-200",
-      internship: "bg-purple-100 text-purple-800 border-purple-200",
-      freelance: "bg-orange-100 text-orange-800 border-orange-200",
-      contract: "bg-gray-100 text-gray-800 border-gray-200",
-    };
-    return colors[type];
-  };
-
-  const calculateDuration = () => {
-    const start = new Date(experience.startDate);
-    const end =
-      experience.endDate === "Present"
-        ? new Date()
-        : new Date(experience.endDate);
-    const diffTime = Math.abs(end.getTime() - start.getTime());
-    const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
-
-    if (diffMonths < 12) {
-      return `${diffMonths} month${diffMonths > 1 ? "s" : ""}`;
-    } else {
-      const years = Math.floor(diffMonths / 12);
-      const months = diffMonths % 12;
-      return `${years} year${years > 1 ? "s" : ""}${
-        months > 0 ? ` ${months} month${months > 1 ? "s" : ""}` : ""
-      }`;
-    }
-  };
-
+export default function ExperienceCard({
+  experience,
+  isFirst,
+}: ExperienceCardProps) {
   return (
-    <div className="group bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-gray-300 transition-all duration-300 hover:-translate-y-1">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-        <div className="flex-1">
-          <div className="flex items-start gap-3">
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                {experience.position}
-              </h3>
-              <p className="text-lg font-medium text-gray-700 mb-2">
-                {experience.company}
-              </p>
-            </div>
-            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
-          </div>
+    <div className="relative flex items-start gap-4 group">
+      {/* Timeline dot */}
+      <div className="relative flex-shrink-0 z-10">
+        <div
+          className={`w-6 h-6 rounded-full flex items-center justify-center bg-blue-500/30 border-2 border-blue-400/50 backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-blue-500/40 group-hover:border-blue-400/70`}
+        >
+          <Briefcase className="w-3 h-3 text-blue-200" />
         </div>
-        <div className="flex flex-col sm:items-end space-y-2">
-          <span
-            className={`px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(
-              experience.type
-            )}`}
-          >
-            {experience.type.charAt(0).toUpperCase() + experience.type.slice(1)}
-          </span>
-        </div>
-      </div>
 
-      {/* Meta Info */}
-      <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600">
-        <div className="flex items-center gap-1">
-          <Calendar className="w-4 h-4" />
-          <span>
-            {formatDate(experience.startDate)} -{" "}
-            {formatDate(experience.endDate)}
-          </span>
-          <span className="text-gray-400">•</span>
-          <span className="text-blue-600 font-medium">
-            {calculateDuration()}
-          </span>
-        </div>
-        <div className="flex items-center gap-1">
-          <MapPin className="w-4 h-4" />
-          <span>{experience.location}</span>
-        </div>
-      </div>
-
-      {/* Description */}
-      <div className="mb-4">
-        <ul className="space-y-2">
-          {experience.description
-            .slice(0, isExpanded ? experience.description.length : 2)
-            .map((item, index) => (
-              <li key={index} className="text-gray-700 flex items-start gap-2">
-                <span className="text-blue-400 mt-2 text-xs">▶</span>
-                <span className="leading-relaxed">{item}</span>
-              </li>
-            ))}
-        </ul>
-
-        {experience.description.length > 2 && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-2 text-sm text-blue-600 hover:text-blue-700 font-medium focus:outline-none focus:underline"
-          >
-            {isExpanded
-              ? "Show less"
-              : `Show ${experience.description.length - 2} more`}
-          </button>
+        {/* Current position indicator */}
+        {isFirst && experience.endDate === "Present" && (
+          <>
+            <div className="absolute -top-0.5 -left-0.5 w-7 h-7 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
+            <div className="absolute -top-1 -left-1 w-8 h-8 bg-green-400 rounded-full opacity-10 animate-ping"></div>
+          </>
         )}
       </div>
 
-      {/* Technologies */}
-      <div className="flex items-start gap-2">
-        <Tag className="w-4 h-4 text-gray-500 mt-1 flex-shrink-0" />
-        <div className="flex flex-wrap gap-2">
-          {experience.technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-default"
-            >
-              {tech}
-            </span>
-          ))}
+      {/* Content */}
+      <div className="flex-1 min-w-0 pb-3">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-500 hover:shadow-xl group-hover:-translate-y-1">
+          {/* Header Section */}
+          <div className="flex justify-between gap-3 mb-3">
+            <div className="flex-1 min-w-0">
+              <h4 className="text-base font-bold mb-1 truncate">
+                {experience.position}
+              </h4>
+              <p className="text-sm font-semibold opacity-90 truncate">
+                {experience.company}
+              </p>
+              <div className="flex items-center gap-2 text-xs opacity-70 mt-1">
+                <MapPin className="w-3 h-3" />
+                <span className="truncate">{experience.location}</span>
+              </div>
+            </div>
+
+            {/* Date - Top Right */}
+            <div className="text-right">
+              <div className="text-xs font-medium opacity-70">
+                {formatDate(experience.startDate)} to{" "}
+                {formatDate(experience.endDate)}
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content Grid */}
+          <div className="flex flex-col gap-4">
+            {/* Description */}
+            <div className="lg:col-span-3">
+              {experience.description?.length > 0 && (
+                <div>
+                  <div className="text-xs font-semibold mb-2 opacity-90">
+                    Responsibilities
+                  </div>
+
+                  <ul className="space-y-1 text-xs">
+                    {experience.description.map((item, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 leading-relaxed"
+                      >
+                        <span className="w-1 h-1 bg-current rounded-full mt-1.5 opacity-60"></span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Technologies */}
+            <div className="w-full">
+              {experience.technologies?.length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {experience.technologies.map((tech, index) => (
+                    <TechTag
+                      key={index}
+                      tech={tech}
+                      index={index}
+                      className="tech-tag-enter"
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
