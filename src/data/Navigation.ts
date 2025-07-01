@@ -7,12 +7,17 @@ export interface NavRoute {
 
 export const navigationRoutes: NavRoute[] = [
   {
+    id: "aboutme",
+    label: "About Me",
+    href: "#aboutme",
+  },
+  {
     id: "experiences",
     label: "Experience",
     href: "#experiences",
   },
   {
-    id: "projects", 
+    id: "projects",
     label: "Projects",
     href: "#projects",
   },

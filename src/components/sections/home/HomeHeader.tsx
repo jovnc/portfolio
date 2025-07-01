@@ -38,14 +38,6 @@ export default function HomeHeader() {
           </h1>
           <p className="text-white">Full Stack Software Engineer</p>
         </div>
-
-        {/* Avatar */}
-        {/* <div className="relative z-10">
-          <Avatar className="w-24 h-24">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        </div> */}
       </div>
 
       {/* Socials */}

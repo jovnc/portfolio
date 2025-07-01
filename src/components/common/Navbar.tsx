@@ -72,7 +72,7 @@ export default function Navbar() {
               key={route.id}
               onClick={() => handleNavClick(route.href)}
               className={`
-                relative px-3 py-1 rounded-lg text-xs font-medium
+                relative px-3 py-2 rounded-lg text-xs font-medium
                 transition-all duration-300 ease-out
                 hover:bg-white/15 hover:backdrop-blur-sm hover:scale-105
                 ${
