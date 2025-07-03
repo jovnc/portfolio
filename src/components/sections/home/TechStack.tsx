@@ -10,26 +10,6 @@ interface TechItem {
   image: string;
 }
 
-// Tech logo mapping
-const techLogos: Record<string, string> = {
-  React:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  "React Query":
-    "https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
-  NextJS:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  TailwindCSS:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-  TypeScript:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  NodeJS:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  PostgreSQL:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  Flask:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
-};
-
 interface TechCardProps {
   title: string;
   icon: React.ElementType;
@@ -71,9 +51,9 @@ function TechCard({
               >
                 {/* Tech Logo */}
                 <div className="relative w-6 h-6 mb-1 flex items-center justify-center">
-                  {techLogos[tech.title] ? (
+                  {tech.image ? (
                     <Image
-                      src={techLogos[tech.title]}
+                      src={tech.image}
                       alt={tech.title}
                       width={24}
                       height={24}

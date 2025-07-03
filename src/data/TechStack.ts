@@ -1,37 +1,44 @@
+export interface TechStackItem {
+  title: string;
+  image: string;
+}
+
 export const frontendTechStack = [
   {
     title: "React",
-    image: "reactjs",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     title: "React Query",
-    image: "reactquery",
+    image:
+      "https://raw.githubusercontent.com/TanStack/query/main/media/emblem-light.svg",
   },
   {
     title: "NextJS",
-    image: "nextjs2",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   },
   {
     title: "TailwindCSS",
-    image: "tailwindcss",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
     title: "TypeScript",
-    image: "typescript",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
 ];
 
 export const backendTechStack = [
   {
     title: "NodeJS",
-    image: "nodejs",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     title: "PostgreSQL",
-    image: "postgresql",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
   },
   {
     title: "Flask",
-    image: "flask",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
   },
 ];

@@ -29,6 +29,8 @@ function AboutMeSection() {
       <div className="max-w-3xl mx-auto mt-12">
         <TechStack />
       </div>
+
+      {/* Certifications Section (with credentials link */}
     </section>
   );
 }
