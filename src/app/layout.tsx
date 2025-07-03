@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SnowBackground from "@/components/ui/snowbackground";
 import { Navbar } from "@/components/common";
+import AnimatedCursor from "@/components/ui/animated-cursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <div className="min-h-screen mx-auto text-white relative">
+          <AnimatedCursor />
           <SnowBackground />
           <Navbar />
           <div className="relative z-10">{children}</div>

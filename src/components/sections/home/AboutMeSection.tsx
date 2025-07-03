@@ -1,7 +1,6 @@
 import React from "react";
 import TechStack from "./TechStack";
 import Certifications from "./Certifications";
-import Education from "./Education";
 
 function AboutMeSection() {
   return (
