@@ -1,5 +1,7 @@
 import React from "react";
 import TechStack from "./TechStack";
+import Certifications from "./Certifications";
+import Education from "./Education";
 
 function AboutMeSection() {
   return (
@@ -26,11 +28,19 @@ function AboutMeSection() {
       </div>
 
       {/* Skills Section */}
-      <div className="max-w-3xl mx-auto mt-12">
+      <div className="max-w-5xl mx-auto mt-12">
         <TechStack />
       </div>
 
-      {/* Certifications Section (with credentials link */}
+      {/* Certifications Section (with credentials link) */}
+      <div className="max-w-4xl mx-auto mt-12">
+        <Certifications />
+      </div>
+
+      {/* Education Section */}
+      {/* <div className="max-w-4xl mx-auto mt-12">
+        <Education />
+      </div> */}
     </section>
   );
 }

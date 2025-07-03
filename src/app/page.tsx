@@ -10,7 +10,7 @@ export default function HomePage() {
 
       {/* Remaining sections */}
       <div className="flex-1">
-        {/* About Myself Skills section */}
+        {/* About Myself section (Education, Certification, Skills) */}
         <AboutMeSection />
 
         {/* Experiences section */}
@@ -18,8 +18,6 @@ export default function HomePage() {
 
         {/* Projects & Hackathons section */}
         <ProjectsSection />
-
-        {/* Education & Certification section */}
 
         {/* Contact section */}
       </div>
