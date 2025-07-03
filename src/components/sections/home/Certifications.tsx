@@ -47,10 +47,10 @@ function CertificationCard({
 
           {/* Title and Issuer */}
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-semibold text-gray-200 group-hover:text-white transition-colors duration-300 leading-tight">
+            <h3 className="text-md font-semibold text-gray-200 group-hover:text-white transition-colors duration-300 leading-tight">
               {title}
             </h3>
-            <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mt-1">
+            <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mt-1">
               {issuer}
             </p>
           </div>
@@ -66,11 +66,6 @@ function CertificationCard({
 
         {/* Credential Link */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Award className="w-4 h-4 text-gray-500" />
-            <span className="text-sm text-gray-400">Digital Credential</span>
-          </div>
-
           <a
             href={credentialUrl}
             target="_blank"
