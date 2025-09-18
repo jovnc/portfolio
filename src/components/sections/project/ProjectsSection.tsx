@@ -26,7 +26,6 @@ export default function ProjectsSection() {
           {/* Stats */}
           <div className="flex flex-row gap-6 max-w-2xl mx-auto mb-12">
             <StatsCard icon={Award} value={5} label="Hackathons Won" />
-            <StatsCard icon={PercentCircle} value={"83%"} label="Win Rate" />
           </div>
         </div>
 

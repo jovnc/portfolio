@@ -36,7 +36,7 @@ export default function HomeHeader() {
           <h1 className="text-6xl font-bold gradient-text tracking-tight leading-none mt-2 py-2">
             <TextTypeAnimation text="Jovan Ng" />
           </h1>
-          <p className="text-white">Full Stack Software Engineer</p>
+          <p className="text-white">Full-Stack Software Engineer</p>
         </div>
       </div>
 

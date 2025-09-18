@@ -11,10 +11,8 @@ function AboutMeSection() {
           KNOW ABOUT ME
         </h3>
 
-        <h1 className="font-bold text-4xl">Full Stack Software Engineer</h1>
-        <div className="text-gray-300 text-sm mb-4">
-          NUS Computer Science | Expected Graduation 2028
-        </div>
+        <h1 className="font-bold text-4xl">Full-Stack Software Engineer</h1>
+        <div className="text-gray-300 text-sm mb-4">NUS Computer Science</div>
 
         <div className="text-gray-100 text-sm italic">
           I'm Jovan Ng, a proactive full-stack developer passionate about
