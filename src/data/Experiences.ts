@@ -15,9 +15,7 @@ export const experiences: Experience[] = [
     location: "Singapore",
     startDate: "2026-01",
     endDate: "2026-05",
-    description: [
-      "Singpass Login will be integrated into the platform, allowing users to login using their Singpass credentials",
-    ],
+    description: ["Singpass Team"],
     technologies: ["Typescript"],
   },
   {
