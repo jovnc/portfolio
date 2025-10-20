@@ -52,6 +52,8 @@ export default function Navbar() {
         ${NAVBAR_CONFIG.height}
         ${NAVBAR_CONFIG.animation}
         rounded-2xl
+        p-2
+        px-10
         ${
           isScrolled
             ? `${NAVBAR_CONFIG.blur} bg-white/8 ${NAVBAR_CONFIG.shadow} border border-white/15`
