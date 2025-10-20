@@ -57,7 +57,7 @@ export const hackathons = [
   {
     imageSrc: "/port63.jpeg",
     title: "Secureatix",
-    subtitle: "NTU Port 63 Hackathon| 1st place",
+    subtitle: "NTU Port 63 Hackathon | 1st place",
     description:
       "Developed a blockchain-based concert ticketing system aimed at reducing fraud in the the resale of concert tickets, with seamless fiat payment integration to abstract blockchain complexities.",
     techStack: ["reactjs", "nextjs", "postgresql"],

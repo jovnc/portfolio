@@ -11,13 +11,13 @@ function AboutMeSection() {
           KNOW ABOUT ME
         </h3>
 
-        <h1 className="font-bold text-4xl">Full-Stack Software Engineer</h1>
+        <h1 className="font-bold text-4xl">Software Engineer</h1>
         <div className="text-gray-300 text-sm mb-4">NUS Computer Science</div>
 
         <div className="text-gray-100 text-sm italic">
-          I'm Jovan Ng, a proactive full-stack developer passionate about
-          crafting solutions that make a difference. With a strong foundation in
-          both front-end and back-end technologies, I thrive on challenges and
+          I'm Jovan Ng, a proactive software developer passionate about crafting
+          solutions that make a difference. With a strong foundation in both
+          front-end and back-end technologies, I thrive on challenges and
           continuously seek to expand my skill set. My journey in tech has been
           driven by a commitment to excellence and a desire to create impactful
           applications.

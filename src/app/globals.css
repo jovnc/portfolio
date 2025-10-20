@@ -2,77 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom animated cursor styles */
-* {
-  cursor: none !important;
-}
-
-/* Smooth transitions for cursor interactions */
-a, button, [role="button"], input, textarea, select, .cursor-pointer {
-  transition: transform 0.2s ease;
-}
-
-a:hover, button:hover, [role="button"]:hover {
-  transform: scale(1.02);
-}
-
-/* Custom cursor animations */
-@keyframes cursor-pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.7;
-  }
-}
-
-@keyframes cursor-ripple {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes cursor-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
-  }
-}
-
-.cursor-pulse {
-  animation: cursor-pulse 2s ease-in-out infinite;
-}
-
-.cursor-ripple {
-  animation: cursor-ripple 0.6s ease-out;
-}
-
-.cursor-glow {
-  animation: cursor-glow 2s ease-in-out infinite;
-}
-
-/* Disable cursor for mobile devices */
-@media (hover: none) and (pointer: coarse) {
-  * {
-    cursor: auto !important;
-  }
-}
-
-/* Performance optimization for cursor */
-.cursor-element {
-  will-change: transform;
-  transform: translateZ(0);
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -265,49 +194,5 @@ html {
   .animate-fade-in,
   .animate-gentle-bounce {
     animation: none;
-  }
-}
-
-/* Custom animated cursor styles */
-* {
-  cursor: none !important;
-}
-
-/* Custom cursor animations */
-@keyframes cursor-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.7;
-  }
-}
-
-@keyframes cursor-ripple {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.cursor-pulse {
-  animation: cursor-pulse 2s ease-in-out infinite;
-}
-
-.cursor-ripple {
-  animation: cursor-ripple 0.6s ease-out;
-}
-
-/* Disable cursor for mobile devices */
-@media (hover: none) and (pointer: coarse) {
-  * {
-    cursor: auto !important;
   }
 }
