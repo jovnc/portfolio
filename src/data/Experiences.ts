@@ -26,8 +26,18 @@ export const experiences: Experience[] = [
     endDate: "Present",
     description: [
       "Developed and integrate QA Automation platform into CI/CD pipeline, using Java Spring Boot and Appium, reducng manual effort in mobile app testing by 80%",
+      "Developed in-house CLI tool using Go with Cobra library for structured logging using S3 Select to reduce CloudWatch costs by 60%, and BATS and Bash for automated testing to ensure reliability and robustness of the tool",
     ],
-    technologies: ["Java", "Spring Boot", "Appium", "CI/CD", "Android", "iOS"],
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Appium",
+      "CI/CD",
+      "Go",
+      "Cobra",
+      "BATS",
+      "Bash",
+    ],
   },
   {
     company: "Formo.so",
