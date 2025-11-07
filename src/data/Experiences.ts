@@ -10,6 +10,15 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "TikTok",
+    position: "Incoming Backend Software Engineer Intern",
+    location: "Singapore",
+    startDate: "2026-05",
+    endDate: "2026-08",
+    description: ["Global LIVE Money Platform"],
+    technologies: ["Go"],
+  },
+  {
     company: "GovTech",
     position: "Incoming Software Engineer Intern",
     location: "Singapore",
